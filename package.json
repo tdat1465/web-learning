@@ -2,9 +2,9 @@
   "name": "web-learning",
   "version": "1.0.0",
   "description": "My project in Node & ExpressJS course from fullstack.edu.vn",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
-    "start": "nodemon --inspect main.js",
+    "start": "nodemon --inspect src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,9 +24,12 @@
   },
   "homepage": "https://github.com/tdat1465/web-learning#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.10",
+    "sass": "^1.93.2"
   }
 }
