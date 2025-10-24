@@ -28,7 +28,11 @@ app.get('/news', (req, res) => {
   res.render('news')
 })
 
-app.listen(port, () => {
+app.listen(port, () => { 
   console.log(`Example app listening on port ${port}`)
 })
 // nếu k có nodemon thì khi sửa file main.js thì phải dừng server và chạy lại lệnh node main.js để server nhận thay đổi
+// template engine
+// http logger morgan
+// static files
+// scss -> css sass --watch src/resources/scss/:src/public/css/ --no-source-map
