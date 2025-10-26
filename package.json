@@ -4,6 +4,7 @@
   "description": "My project in Node & ExpressJS course from fullstack.edu.vn",
   "main": "src/main.js",
   "scripts": {
+    "beautify": "lint-staged",
     "start": "nodemon --inspect src/main.js",
     "watch": "sass --watch src/resources/scss/:src/public/css/ --no-source-map",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,14 +24,27 @@
   "bugs": {
     "url": "https://github.com/tdat1465/web-learning/issues"
   },
+  "lint-staged": {
+    "src/**/*.{js, hbs, scss}": [
+      "prettier --single-quote --trailing-comma=all --tab-width=4 --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "homepage": "https://github.com/tdat1465/web-learning#readme",
   "dependencies": {
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
     "morgan": "^1.10.1",
     "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
     "sass": "^1.93.2"
   }
 }

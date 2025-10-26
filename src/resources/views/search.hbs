@@ -1,20 +1,33 @@
-<div class="mt-4">
-<form method="POST">
-  <div class="mb-3">
-    <label for="searchInput" class="form-label">Tìm kiếm</label>
-    <input type="text" name="q" class="form-control" id="searchInput" aria-describedby="searchHelp" placeholder="Nhập từ khoá... ">
-  </div>
+<div class='mt-4'>
+  <form method='POST'>
+    <div class='mb-3'>
+      <label for='searchInput' class='form-label'>Tìm kiếm</label>
+      <input
+        type='text'
+        name='q'
+        class='form-control'
+        id='searchInput'
+        aria-describedby='searchHelp'
+        placeholder='Nhập từ khoá... '
+      />
+    </div>
 
-  <div class="mb-3">
-    <label for="genderInput" class="form-label">Giới tính</label>
-    <select name="gender" class="form-control" id="genderInput" aria-describedby="genderHelp">
-      <option value="">Chọn giới tính</option>
-      <option value="male">Nam</option>
-      <option value="female">Nữ</option>
-    </select>
-    <div id="genderHelp" class="form-text">Chúng tôi sẽ không bao giờ chia sẻ giới tính của bạn với bất kỳ ai khác.</div>
-  </div>
+    <div class='mb-3'>
+      <label for='genderInput' class='form-label'>Giới tính</label>
+      <select
+        name='gender'
+        class='form-control'
+        id='genderInput'
+        aria-describedby='genderHelp'
+      >
+        <option value=''>Chọn giới tính</option>
+        <option value='male'>Nam</option>
+        <option value='female'>Nữ</option>
+      </select>
+      <div id='genderHelp' class='form-text'>Chúng tôi sẽ không bao giờ chia sẻ
+        giới tính của bạn với bất kỳ ai khác.</div>
+    </div>
 
-  <button type="submit" class="btn btn-primary">Tìm kiếm</button>
-</form>
+    <button type='submit' class='btn btn-primary'>Tìm kiếm</button>
+  </form>
 </div>
