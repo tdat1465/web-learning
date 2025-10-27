@@ -4,7 +4,12 @@ import morgan from 'morgan';
 import { engine as handlebars } from 'express-handlebars';
 import { fileURLToPath } from 'url';
 import Routes from './routes/index.js';
+import db from './config/db/index.js';
 
+// Connect to DB
+db.connect();
+
+// __dirname fix for ES module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
@@ -23,14 +28,14 @@ app.use(express.json());
 
 // Template engine
 app.engine('hbs', handlebars({ extname: '.hbs' }));
-    app.set('view engine', 'hbs');
+app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources', 'views'));
 
 // initialize routes
 Routes(app);
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`App listening on port ${port}`);
 });
 // nếu k có nodemon thì khi sửa file main.js thì phải dừng server và chạy lại lệnh node main.js để server nhận thay đổi
 // template engine
