@@ -5,10 +5,10 @@ class SiteController {
     // [GET] /
     index(req, res, next) {
         Course.find({})
-            .then(courses => {
+            .then((courses) => {
                 // giải quyết vấn đề mongoose object
-                res.render('home', { 
-                    courses: multipleMongooseToObject(courses) 
+                res.render('home', {
+                    courses: multipleMongooseToObject(courses),
                 });
             })
             .catch(next);
