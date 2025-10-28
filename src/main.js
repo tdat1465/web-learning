@@ -44,3 +44,6 @@ app.listen(port, () => {
 // scss -> css sass --watch src/resources/scss/:src/public/css/ --no-source-map
 // thêm bootstrap dùng cdn vào layout.hbs
 // tạo thư mục routes, controllers -> xử lý routes và controller riêng biệt
+// tạo thư mục models -> tạo model Course dùng mongoose
+// tạo thư mục config/db -> cấu hình kết nối mongoose với mongodb ()
+// chỉnh sửa controller SiteController để lấy dữ liệu từ mongodb và truyền vào view home.hbs
