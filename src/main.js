@@ -47,3 +47,8 @@ app.listen(port, () => {
 // tạo thư mục models -> tạo model Course dùng mongoose
 // tạo thư mục config/db -> cấu hình kết nối mongoose với mongodb ()
 // chỉnh sửa controller SiteController để lấy dữ liệu từ mongodb và truyền vào view home.hbs
+// tạo thư mục util -> tạo file mongoose.js để xử lý mongoose object về object thường
+// tạo thư mục courses, tạo route course.js và controller CourseController.js để xử lý trang chi tiết khóa học
+// chỉnh sửa home.hbs để link đến trang chi tiết khóa học
+// tạo trang courses/show.hbs để hiển thị chi tiết khóa học
+// chinh sua data
