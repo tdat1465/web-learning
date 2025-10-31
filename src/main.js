@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import morgan from 'morgan';
 import { engine as handlebars } from 'express-handlebars';
+import methodOverride from 'method-override';
 import { fileURLToPath } from 'url';
 import Routes from './routes/index.js';
 import db from './config/db/index.js';
@@ -26,8 +27,19 @@ app.use(express.json());
 // HTTP logger
 //app.use(morgan('combined'))
 
+// Method override middleware
+app.use(methodOverride('_method'));
+
 // Template engine
-app.engine('hbs', handlebars({ extname: '.hbs' }));
+app.engine(
+    'hbs',
+    handlebars({
+        extname: '.hbs',
+        helpers: {
+            sum: (a, b) => a + b,
+        },
+    }),
+);
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources', 'views'));
 
@@ -52,3 +64,8 @@ app.listen(port, () => {
 // chỉnh sửa home.hbs để link đến trang chi tiết khóa học
 // tạo trang courses/show.hbs để hiển thị chi tiết khóa học
 // chinh sua data
+// thêm chức năng chỉnh sửa
+// tạo /me/stored/courses để hiển thị các khóa học đã lưu
+// tạo bảng courses bằng boostrap trong trang stored-courses.hbs
+// thêm middleware method-override để hỗ trợ PUT, DELETE trong form
+
