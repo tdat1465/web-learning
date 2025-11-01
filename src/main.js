@@ -68,4 +68,7 @@ app.listen(port, () => {
 // tạo /me/stored/courses để hiển thị các khóa học đã lưu
 // tạo bảng courses bằng boostrap trong trang stored-courses.hbs
 // thêm middleware method-override để hỗ trợ PUT, DELETE trong form
-
+// thêm chức năng xoá khoá học
+// thêm modal xác nhận xoá khoá học(sửa id của nút xoá để truyền vào modal)
+// thêm jquery để xử lý modal xác nhận xoá khoá học
+// tạo form ẩn để submit xoá khoá học
